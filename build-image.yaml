@@ -8,11 +8,5 @@ spec:
     git:
       uri: "https://github.com/engineering-do-brasil/jbpm.git"
   strategy: 
-    sourceStrategy:
-      from:
-        kind: "ImageStreamTag"
-        name: "pafe-jbpm:latest"
-  output: 
-    to:
-      kind: "ImageStreamTag"
-      name: "pafe-jbpm"
+    dockerStrategy:
+      dockerfilePath: Dockerfile
